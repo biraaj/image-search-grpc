@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/biraaj/image-search-grpc/image_search";
+
+package image_search;
+
+service ImageSearch {
+  rpc SearchImage(SearchRequest) returns (ImageResponse);
+}
+
+message SearchRequest {
+  string keyword = 1;
+}
+
+message ImageResponse {
+  bytes image_data = 1;
+}
