@@ -99,5 +99,5 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", IndexHandler)
 	http.HandleFunc("/search", SearchHandler)
-	log.Fatal(http.ListenAndServe(":8082", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
